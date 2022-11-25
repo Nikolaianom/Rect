@@ -2,12 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Counter from './components/Counter'
 import reportWebVitals from './reportWebVitals';
+
+class Title extends React.Component {
+  render() {
+    return <h1>Hello {this.props.name} {this.props.surname}</h1>
+  }
+}
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div>
+    <Counter count = {0}/>
+    </div>
   </React.StrictMode>
 );
 
