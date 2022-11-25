@@ -9,7 +9,7 @@ class Counter extends React.Component {
         // bind() - привязывает контекст к функции
         this.increment = this.increment.bind(this)
         this.dicrement = this.dicrement.bind(this)
-        this.randomNumber = this.random.bind(this)
+        this.randomNumber = this.randomNumber.bind(this)
         this.reset = this.reset.bind(this)
     }
 
@@ -31,10 +31,10 @@ class Counter extends React.Component {
         }
     }
 
-    random() {
+    randomNumber() {
         
         this.setState({
-            count: this.state.count + 3
+            count: this.state.count + Math.floor(Math.random() * (100 - 1) + 1)
         })
       }
 
@@ -53,7 +53,7 @@ class Counter extends React.Component {
                 <h1>{this.state.count}</h1>
                 <button onClick = {this.increment}>INC</button>
                 <button onClick = {this.dicrement}>DEC</button>
-                <button onCLick = {this.random}>RND</button>
+                <button onCLick = {this.randomNumber}>RND</button>
                 <button onCLick = {this.reset}>RESET</button>
             </div>
             
